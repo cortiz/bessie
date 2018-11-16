@@ -6,7 +6,7 @@ from sys import argv
 
 def projects(root_location, es):
 
-    for root, dirs, files in os.walk("{}/developers/projects/"):
+    for root, dirs, files in os.walk("{}/developers/projects/".format(root_location)):
         for x in files:
             if x.split(".")[-1] == "xml":
                 abs_path = os.path.abspath(os.path.join(root, x))
