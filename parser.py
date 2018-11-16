@@ -26,7 +26,7 @@ def projects(root_location, es):
                             "category":cat,
                             "type":"def"
                         }
-                        es.index(index="bessie", doc_type='doc', id="{}/{}".format(cat,x), body=to_index)
+                        es.index(index="bessie", doc_type='doc', id="{}{}".format(cat,x), body=to_index)
 
 
 def main(root_location, es):
@@ -52,7 +52,7 @@ def main(root_location, es):
                                 "category":cat,
                                 "type":"doc"
                             }
-                            es.index(index="bessie", doc_type='doc', id="{}/{}".format(cat,x), body=to_index)
+                            es.index(index="bessie", doc_type='doc', id="{}{}".format(cat,x), body=to_index)
 
 
 if __name__ == '__main__':

@@ -71,7 +71,7 @@ class CrafterWhatIsSearchLogicAdapter(LogicAdapter):
                 "cat":searchR["_source"]["category"],
                 "id":searchR["_id"]
             }
-            response_statement = Statement('{}<br/><br/>more info at https://docs.craftercms.org/en/3.0/{}'
+            response_statement = Statement('{}<br/><a href="https://docs.craftercms.org/en/3.0/{}">more info</a><br/></br>'
                                            .format(result.get("answer"),result.get("id").replace(".xml",".html")))
             response_statement.confidence = 1
         else:
