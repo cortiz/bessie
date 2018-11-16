@@ -14,7 +14,7 @@ def projects(root_location, es):
                     xmlDoc = etree.parse(abs_path)
                     xml_doc_root = xmlDoc.getroot()
                     subsections = xml_doc_root.xpath("//document/section")
-                    cat = os.path.dirname(abs_path).replace("/home/cortiz/dev/cortiz/cdcb/docs/build/xml/", "")
+                    cat = os.path.dirname(abs_path).replace(root_location, "")
                     print("Indexing {}/{}".format(cat, x))
                     for subsection in subsections:
                         title = subsection.xpath("title/text()")
@@ -40,7 +40,7 @@ def main(root_location, es):
                         xmlDoc = etree.parse(abs_path)
                         xml_doc_root = xmlDoc.getroot()
                         subsections = xml_doc_root.xpath("//document/section/section")
-                        cat = os.path.dirname(abs_path).replace("/home/cortiz/dev/cortiz/cdcb/docs/build/xml/", "")
+                        cat = os.path.dirname(abs_path).replace(root_location, "")
                         print("Indexing {}/{}".format(cat, x))
                         for subsection in subsections:
                             title = subsection.xpath("title/text()")
