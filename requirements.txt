@@ -11,7 +11,7 @@ future==0.17.1
 idna==2.7
 itsdangerous==1.1.0
 Jinja2==2.10
-lxml==4.2.5
+lxml==4.6.5
 MarkupSafe==1.1.0
 mathparse==0.1.2
 nltk==3.3
